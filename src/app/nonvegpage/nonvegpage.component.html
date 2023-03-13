@@ -1,0 +1,17 @@
+<div class="container">
+    <img [src]="nonvegpage.imageUrl" [alt]="nonvegpage.name">
+</div>
+<div class ='details'>
+   <div class="header">
+<span class="name">
+    {{nonvegpage.name}}
+</span>
+</div>
+<div class="price">
+    <span>
+        {{nonvegpage.price|currency:'INR'}}
+    </span>
+</div>
+<button class="add" (click)="addToCart()">ADD TO CART 🛍️</button>
+</div>
+

@@ -1,0 +1,30 @@
+<form action="action_page.php" method="post" class="form-signin" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div class="imgcontainer">
+    
+        <img src="/assets/user.png" alt = "Avatar" class = "avatar">
+  
+    </div>
+  
+    <div class="container">
+      <div class = "container">
+      <label for="uname"><b>Username:  </b></label>
+      <input type="text" [formControlName]="'username'" placeholder="Enter Username" name="uname" required>
+      </div>
+  <div class="container">
+      <label for="psw"><b>Password:  </b></label>
+      <input type="password"[formControlName]="'password'" placeholder="Enter Password" name="psw" required>
+  </div>
+      <button type="submit" (click) = "onSubmit()">Login</button>
+      <div>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+      </div>
+    </div>
+  
+  
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" class="cancelbtn">Cancel</button>
+      
+    </div>
+  </form>

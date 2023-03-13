@@ -1,0 +1,35 @@
+header{
+    background-color:#F5EBDC ;
+    padding:0;
+    border-top: 5px solid #FF8732;
+border-bottom: 5px solid #FF8732 ;
+
+}
+a{
+color:#D62300 ;
+
+}
+a:hover{
+    background-color: #FF8732 ;
+    color:whitesmoke ;
+}
+.container1{
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+a.logo{
+    font-family: Impact, 'Arial Narrow Bold', sans-serif;
+    font-size: x-large;
+    padding: 1em;
+}
+.container2{
+    list-style: none;
+    margin: 0 ;
+
+
+}
+.container2{
+
+display: flex;
+}

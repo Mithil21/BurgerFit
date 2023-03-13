@@ -1,0 +1,16 @@
+<div class="container">
+    <img [src]="vegpage.imageUrl" [alt]="vegpage.name">
+</div>
+<div class ='details'>
+   <div class="header">
+<span class="name">
+    {{vegpage.name}}
+</span>
+</div>
+<div class="price">
+    <span>
+        {{vegpage.price|currency:'INR'}}
+    </span>
+</div>
+<button class="add" (click)="addToCart()">ADD TO CART 🛍️</button>
+</div>

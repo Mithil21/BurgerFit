@@ -1,0 +1,55 @@
+<div class="container">
+    <img [src]="veganpage.imageUrl" [alt]="veganpage.name">
+    <div class="container1">
+        <table>
+            <thead>
+<tr><td>Nurtitional Value</td></tr>
+            </thead>
+            <tbody>
+                <tr>
+                <th>Carbs</th>
+                <td>{{veganpage.carbs}} g</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <th>Protein</th>
+                    <td>{{veganpage.protein}} g</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <th>Fat</th>
+                    <td>{{veganpage.fat}} g</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <th>Total Calories</th>
+                    <td>{{veganpage.calories}} kcals</td>
+                </tr>
+            </tbody>
+            
+        </table>
+    </div>
+</div>
+<div class ='details'>
+   <div class="header">
+<span class="name">
+    {{veganpage.name}}
+</span>
+</div>
+<div class="detail">
+    <span class="detail">
+        <br>
+        {{veganpage.details}}
+        <br>
+    </span>
+</div>
+<div class="price">
+    <span>
+        {{veganpage.price|currency:'INR'}}
+    </span>
+</div>
+<button class="add" (click)="addToCart()">ADD TO CART 🛍️</button>
+</div>

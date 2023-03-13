@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+<div class="container" >
+    <p>Welcome to low carbs and ketogenic world , that too with your favorite burgers!!</p>
+    <!-- <p>Choose the ingredients you want to add</p> -->
+    <!-- //image addition// -->
+    <!-- <app-search></app-search> -->
+    <ul >
+        
+        <li *ngFor="let keto of ketos">
+            <a  routerLink="/keto/{{keto.id}}">
+
+                <img src="{{keto.imageUrl}}" alt="keto images" >
+                <div class="content">
+                    <div class="name">
+                        {{keto.name}}
+                    </div>
+
+                    <div class="price">
+                        {{keto.price|currency: 'INR'}}
+                    </div>
+                    <button class="add">ADD ➕</button>
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>
+</body>
+</html>
+

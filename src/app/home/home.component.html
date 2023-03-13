@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+    <div class="navbar">
+        <ul class="navbar">
+            <li class="navbar"><a class="navbar" (click)="changeStage(1)"><img class="burgertype__image" src="/assets/veg-inactive.svg" alt="icon"><label> VEG</label></a></li>
+            <li class="navbar"><a class="navbar" (click)="changeStage(2)"><img class="burgertype__image" src="/assets/non-veg.svg" alt="icon"> NON VEG</a></li>
+            <li class="navbar"><a class="navbar" (click)="changeStage(3)">🍱 KETO</a></li>
+            <li class="navbar"><a class="navbar" (click)="changeStage(4)"> 🥬VEGAN</a></li>
+            <!-- <li class="navbar"><app-search></app-search></li> -->
+            <!-- <li *ngIf="stage != 0" class="navbar"><a class="navbar" (click)="changeStage(0)">Back</a></li> -->
+        </ul>
+    </div>
+    <br>
+    <br>
+    <div class ="container">
+        <app-search></app-search>
+      </div>
+    <div class="container" *ngIf="stage === 1">
+        
+        <app-veg-burger></app-veg-burger>
+    </div>
+    <div class="container" *ngIf="stage === 2">
+        <app-nonveg></app-nonveg>
+    </div>
+    <div class="container" *ngIf="stage === 3">
+        <app-keto></app-keto>
+    </div>
+    <div class="container" *ngIf="stage === 4">
+        <app-vegan></app-vegan>
+    </div>
+ 
+</body>
+
+</html>

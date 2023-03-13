@@ -1,0 +1,55 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 2rem;
+}
+.container > *{
+    min-width: 25rem;
+    max-width: 40rem;
+
+}
+img{
+    border-radius: 3rem;
+   
+}
+.details{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex: 1 0;
+    border-radius: 3rem;
+    padding: 1rem;
+    color: black;
+    margin-left: 1rem;
+}
+.add{
+    background-color:#FF8732;
+    padding: 1px solid;
+    border-radius: 2rem ;
+    border-color: #FF8732;
+ color: whitesmoke;
+ font-family: 'Impact','Arial Narrow Bold', sans-serif;
+ font-size: medium;
+ height: 2rem;
+     width: auto;
+     justify-content:center ;
+     float: center;
+ 
+ }
+ div button:hover{
+     opacity: .8;
+     cursor: pointer;;
+ }
+ .details .name{
+    font-size: 2rem;
+    color: brown;
+    font-weight: bold;
+    margin-top: auto;
+    margin-bottom: 90rem;
+ }
+ .details .price{
+    font-size: 1.8rem;
+    color: rgb(0, 198, 0);
+ }

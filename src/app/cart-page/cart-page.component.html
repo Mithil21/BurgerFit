@@ -1,0 +1,77 @@
+<form (ngSubmit)="confirmOrder()">
+    <div class="container"><ul>
+        <li *ngFor="let cartItem of cart.items">
+            <div>
+            <img [src]="cartItem.food.imageUrl" [alt] ="cartItem.food.name" >
+        </div>
+        <div>
+            <a routerLink="/food/{{cartItem.food.id}}">
+                {{cartItem.food.name}}
+            </a>
+    
+        </div>
+        <div>
+     <!-- //to select items// -->
+        <select #quantitySelect (change)="changeQuantity(cartItem, quantitySelect.value)">
+            <option >1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+        </select>
+        </div>
+        <div>
+          {{cartItem.price |currency:'INR'}}  
+        </div>
+        <div>
+            <button class="remove-button" (click)="removeFromCart(cartItem)">
+                Remove
+            </button>   </div>
+        </li>
+    
+    </ul>
+    <div class="checkout">
+        <div class ="food-count">
+            {{cart.items.length}}
+        </div>
+    <div class = " total-price">
+    {{cart.totalPrice | currency:'INR'}}
+    </div>
+    <div *ngIf="displayNutrition()">
+<table>
+            <tbody>
+                <tr>
+                <th>Carbs</th>
+                <td>{{carbs}} g</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <th>Protein</th>
+                    <td>{{prot}} g</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <th>Fat</th>
+                    <td>{{fat}} g</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <th>Total Calories</th>
+                    <td>{{cal}} kcals</td>
+                </tr>
+            </tbody>
+            
+        </table>
+    </div>
+    <div>
+        <button type="submit">CONFIRM ORDER</button>
+    </div>
+    
+    </div>
+   
+    </div>
+</form>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+<div class="container" >
+    <p>Welcome to Vegan world , that too with your favorite burgers!!</p>
+    <!-- <p>Choose the ingredients you want to add</p> -->
+    <!-- //image addition// -->
+    <!-- <app-search></app-search> -->
+    <ul >
+        
+        <li *ngFor="let vegan of vegans">
+            <a  routerLink="/vegan/{{vegan.id}}">
+
+                <img src="{{vegan.imageUrl}}" alt="vegan images" >
+                <div class="content">
+                    <div class="name">
+                        {{vegan.name}}
+                    </div>
+
+                    <div class="price">
+                        {{vegan.price|currency: 'INR'}}
+                    </div>
+                    <button class="add">ADD ➕</button>
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>
+</body>
+</html>
+
+
